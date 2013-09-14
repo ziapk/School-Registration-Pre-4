@@ -66,7 +66,7 @@ $icon_font_size: 20px;
 	@include makeFluidRow();
 	.ya-main {
 		@include makeFluidColumn(9);
-		@media (max-width: 979px) {
+		@media (max-width: 1200px) {
 			@include makeFluidColumn(12, 0 ,0);
 		}
 	}
@@ -76,8 +76,6 @@ $icon_font_size: 20px;
 }
 
 .ya-school-registration-pre-4 {
-    padding: $margin_padding * 2;
-    min-width: 780px;
 	h1 {
 		font: $PageHeading;
 		border-bottom: $NormalLine;
@@ -213,6 +211,9 @@ select.ya-empty {
 	height: 20px;
 	display: table-cell;
 	vertical-align: middle;
+	[data-icon]{
+		font-size:11.844px;
+	}
 }
 .ya-registration-pre-rys-infos {
 	@include makeFluidRow();
@@ -248,7 +249,56 @@ select.ya-empty {
 .ya-help-icon {
     color: #E5A053 !important;
 }
+.input-medium{
+	min-width:170px !important;
+	width:auto !important;
+}	
 
 
+@media (max-width: 1200px) {
+	.ya-edit-track{
+		.ya-edit-track-controls{
+			width:40% !important;
+			.ya-select-designation{
+				width:auto !important;
+				float:none !important;
+				margin:0 !important;
+			}
+			.ya-track-name{
+				@extend .ya-select-designation;
+				input{
+					width:100%;
+					height:auto;
+					-moz-box-sizing:border-box;
+					-webkit-box-sizing:border;
+					box-sizing:border-box;
+				}
+			}
+			
+		}
+	}
+}
+@media (max-width: 979px) {
+.ya-yoga-type-list{
+	width:38% !important;
+}
+}
 
-
+@media (max-width: 767px) {
+	body{
+		padding:0 !important;
+	}
+	.ya-edit-track {
+		.ya-edit-track-controls{
+			width:100% !important;
+		}
+		.ya-yoga-type-list{
+			width:100% !important;
+			margin:0;
+		}
+	}
+	div.multi-step.numbered ol > li .num{
+		position:relative;
+		z-index:999;
+	}
+}
