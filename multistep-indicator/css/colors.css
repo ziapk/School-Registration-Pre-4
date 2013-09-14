@@ -1,0 +1,69 @@
+div.multi-step ol > li.current .title,
+div.multi-step ol > li.current .description {					/* current title text color */
+	color:#fff;
+}
+div.multi-step ol > li .title, 
+div.multi-step ol > li .description {							/* title text color */
+	color:#06c;
+}
+div.multi-step ol > li .subtitle {						/* subtitle text color */
+	color:#525c66;
+}
+
+div.multi-step.numbered ol > li.current .num,
+div.multi-step.numbered ol > li.current ~ li .num {		/* current (and following) step number, background, border and text color */ 
+	background:#030e1b;
+	border-color:#fff;
+	color:#fff;
+}
+div.multi-step.numbered ol > li .num {					/* the step number */
+	background:#73797f;
+	border-color:#f1f1f1;
+	color:#f0f0f0;
+}
+
+
+div.multi-step.color-1 ol > li .bg,
+div.multi-step.color-1 ol > li .bg .arrow {				/* default step background */
+	background-image:url(../img/colors/blue.png);
+}
+div.multi-step.color-1 ol > li.current .bg,
+div.multi-step.color-1 ol > li.current .bg .arrow {		/* the active step */
+	background-image:url(../img/colors/blue_active.png);
+}
+
+div.multi-step.color-2 ol > li .bg,
+div.multi-step.color-2 ol > li .bg .arrow {
+	background-image:url(../img/colors/green.png);
+}
+div.multi-step.color-2 ol > li.current .bg,
+div.multi-step.color-2 ol > li.current .bg .arrow {
+	background-image:url(../img/colors/green_active.png);
+}
+
+div.multi-step.color-3 ol > li .bg,
+div.multi-step.color-3 ol > li .bg .arrow {
+	background-image:url(../img/colors/red.png);
+}
+div.multi-step.color-3 ol > li.current .bg,
+div.multi-step.color-3 ol > li.current .bg .arrow {
+	background-image:url(../img/colors/red_active.png);
+}
+
+div.multi-step.color-4 ol > li .bg,
+div.multi-step.color-4 ol > li .bg .arrow {
+	background-image:url(../img/colors/grey.png);
+}
+div.multi-step.color-4 ol > li.current .bg,
+div.multi-step.color-4 ol > li.current .bg .arrow {
+	background-image:url(../img/colors/grey_active.png);
+}
+
+div.multi-step.color-5 ol > li .bg,
+div.multi-step.color-5 ol > li .bg .arrow {
+	background-image:url(../img/colors/orange.png);
+}
+div.multi-step.color-5 ol > li.current .bg,
+div.multi-step.color-5 ol > li.current .bg .arrow {
+	background-image:url(../img/colors/orange_active.png);
+}

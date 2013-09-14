@@ -1,0 +1,254 @@
+/* ####################################################
+NOTE
+scss file for school profile
+###################################################
+*/
+
+@import "bootstrap-responsive";
+
+
+$gridFluidColumnWidth: 6.38298%;
+$gridFluidGutterWidth: 2.12766%;
+
+@mixin makeFluidRow() {
+  width: 100%;
+  @include clearfix();
+}
+@mixin makeFluidColumn($columns: 1, $offset: 0, $marginRate: 1) {
+  float: left;
+  margin-left: (($gridFluidColumnWidth * $offset) + ($gridFluidGutterWidth * ($offset - 1)) + ($gridFluidGutterWidth * 2)) * $marginRate;
+  width: ($gridFluidColumnWidth * $columns) + ($gridFluidGutterWidth * ($columns - 1));
+  
+  &:first-child {
+        margin-left: 0;
+  }
+}
+
+
+/** Global Fonts **/
+$Normal: 'ProximaNova-Regular';
+$Semibold: 'ProximaNova-Semibold';
+$Bold: 'ProximaNova-Bold';
+$Italic: 'ProximaNova-RegularIt';
+
+/** Global Type Size **/
+$PageHeading: 36px $Normal;
+$IntroText: 14px/20px $Normal;
+$Subheading: 20px/24px $Bold;
+$BodyText: 14px/17px $Normal;
+
+/** Global Color **/
+$Red: #96171A;
+$Gray: #5f6a72;
+$Lightgray: #D3D1C7;
+$Blue: #1E398D;
+$Orange: #F37021;
+$Green:                 #a1cc86 !default;
+
+/** Global Radius **/
+$LargeRadius: 20px;
+$SmallRadius: 4px;
+
+/** Global Lines **/
+$NormalLine: 1px solid $Lightgray;
+
+/** Global Drop Shadow **/
+$LargeShadow: 2px 3px 20px #5f6a72;
+$MediumShadow: 5px 5px 5px #c8ccce;
+$SmallShadow: 1px 1px 15px #8a9aa6;
+$TinyShadow: 0px 2px 5px #c8ccce;
+
+$margin_padding: 15px;
+$icon_font_size: 20px;
+
+
+.ya-article {
+	@include makeFluidRow();
+	.ya-main {
+		@include makeFluidColumn(9);
+		@media (max-width: 979px) {
+			@include makeFluidColumn(12, 0 ,0);
+		}
+	}
+	.ya-right-sidebar {
+		@include makeFluidColumn(3);
+	}
+}
+
+.ya-school-registration-pre-4 {
+    padding: $margin_padding * 2;
+    min-width: 780px;
+	h1 {
+		font: $PageHeading;
+		border-bottom: $NormalLine;
+		padding-bottom: 5px;
+	}
+	.ya-widget {
+		h3 {
+			border-bottom: $NormalLine;
+		}
+	}
+	hr {
+		border-bottom: $NormalLine;
+	}		
+}
+
+
+.ya-school-registration-block {
+	@include makeFluidRow();
+}
+
+@mixin ya-control-group {
+    margin-bottom: $margin_padding;
+}
+@mixin ya-checkbox-group {
+  @include clearfix();
+  margin: $margin_padding / 2 0;
+}
+@mixin ya-checkbox-group {
+  
+}
+@mixin ya-checkbox-control {
+	float: left;
+	margin-right: 10px;
+}
+@mixin ya-align-middle {
+	height: 100px;
+	display: table-cell;
+	vertical-align: middle;
+}
+@mixin ya-collapse-icon {
+	float: right;
+	cursor: pointer;
+	color: $Gray;
+}
+@mixin ya-collapse-title {
+	float: left;
+}
+@mixin yellow-panel {
+  background-color: #fff9e6;  
+  border: 2px solid #999999;   
+  border-radius: $LargeRadius;
+  padding: $margin_padding;
+  margin: $margin_padding * 2 0;
+  .ya-section-content {
+
+  }
+  span[data-icon] {
+    margin: 0 0 0 5px;
+    color: #4E453E;
+    font-size: 16px;
+  }
+}
+
+.ya-italic {
+	font-family: $Italic;
+}
+span[data-icon] {
+  font-size: $icon_font_size;
+}
+
+.ya-track-details {
+	@include makeFluidRow();
+	img {
+		float: left;
+		margin-right: 10px;
+	}
+	.ya-track-details-container {
+		@include ya-align-middle;
+	}
+}
+.ya-rys-edit-track {
+	margin-top: $margin_padding * 2;
+}
+
+.ya-edit-track {
+	.ya-edit-track-container {
+		@include makeFluidRow();
+	}
+	.ya-edit-track-controls{
+		@include makeFluidColumn(7);
+		.ya-select-designation {
+			@include makeFluidColumn(4.5);
+		}
+		.ya-track-name {
+			@include makeFluidColumn(7, 0.5);
+			input {
+				width: 95%;
+			}	
+		}
+
+	}
+	.ya-yoga-type-list {
+		@include makeFluidColumn(3);
+		input[type='checkbox'] {
+			@include ya-checkbox-control;
+		}
+		ul {
+			list-style: none outside none;
+			margin: 5px 0 0 0;
+		}
+	}
+}
+
+
+select {
+  color: black;
+  width: 100%;
+  option { 
+    color: black; 
+  }
+}
+select.ya-empty { 
+  color: gray; 
+}
+.ya-check-icon {
+	color: $Green;
+}
+.ya-clock-icon {
+	color: $Red;
+}
+.ya-badge {
+	padding: 3px 8px;
+	height: 20px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.ya-registration-pre-rys-infos {
+	@include makeFluidRow();
+	margin-top: $margin-padding * 5;
+	.ya-pre-rys-info-logo {
+		@include makeFluidColumn(1.5);
+	}
+	.ya-pre-rys-info {
+		@include makeFluidColumn(10.5);
+	}
+}
+.ya-pre-rys-info-header {
+	@include makeFluidRow();
+	border-bottom: $NormalLine;
+}
+.ya-pre-rys-info-row {
+	@include makeFluidRow();
+	margin-top: 10px;
+}
+.ya-pre-track-name {
+	@include makeFluidColumn(3.3);
+}
+.ya-pre-yoga-types {
+	@extend .ya-pre-track-name;
+}
+.ya-pre-rys-status {
+	@extend .ya-pre-track-name;
+}
+.ya-create-new-track {
+	@include makeFluidRow();
+	margin: $margin_padding * 2 0;
+}
+.ya-help-icon {
+    color: #E5A053 !important;
+}
+
+
+
+

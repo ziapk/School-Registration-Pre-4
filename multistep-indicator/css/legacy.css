@@ -1,0 +1,146 @@
+div.multi-step {
+	display:block;
+	font-size:1em;
+	margin-bottom: 43px;
+}
+div.multi-step ol {
+	display:block;
+	margin:0;
+	padding:0 20px 0 0;
+	overflow:hidden;				/* this is needed, to contain the floats */
+	position:relative;				/* position parent for the backgrounds */
+}
+div.multi-step ol > li {
+	display:block;
+	float:left;
+	list-style:none;				/* the default list numbers are not really usefull when the LIs are floated */
+	margin:0;
+	padding:0;
+	height: 50px;
+}
+div.multi-step ol > li:last-child .bg {
+	border-radius:0 8px 8px 0;		/* we need to round those corners, otherwise the background will show over the rounded border */
+}
+div.multi-step ol > li:first-child .bg {
+	border-radius:8px 0 0 8px;
+}
+div.multi-step ol > li.current p,
+div.multi-step ol > li.current .wrap,
+div.multi-step ol > li.current ~ li .wrap {
+	opacity:1;
+	filter:alpha(opacity=100);		/* this is for IE 8 */
+}
+div.multi-step ol > li .bg {		/* cannot really use the LI for the background, since they might all have different heights */
+	background-position:0 50%;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:0;
+	bottom:0;
+}
+div.multi-step ol > li .bg .arrow {
+	background-position:100% 50%;
+	background-repeat:no-repeat;
+	content:"";
+	display:block;
+	position:absolute;
+	top:0;
+	right:-18px;
+	bottom:0;
+	width:24px;
+}
+div.multi-step ol > li .num {
+	display:none;
+}
+div.multi-step ol > li .wrap {
+	min-height:20px;
+	padding:8px 0 8px 28px;
+	position:relative;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+}
+div.multi-step ol > li p {
+	margin:0;
+}
+div.multi-step ol > li .title {
+	font-weight:bold;
+	line-height:1;
+}
+div.multi-step ol > li .subtitle {
+	font-size:0.8em;
+	line-height:1.2;
+	margin-top:0.4em;
+}
+
+
+div.multi-step.numbered ol > li .num {
+	display:inline-block;
+	vertical-align:top;
+	position:absolute;
+	top:11px;
+	left:24px;
+	border-style:solid;
+	border-width:2px;
+	border-radius:50%;
+	width:21px;
+	height:21px;
+	line-height:20px;
+	font-size:0.8em;
+	font-weight:bold;
+	text-align:center;
+}
+div.multi-step.numbered ol > li .wrap {
+	padding-left: 15%;
+}
+
+
+
+/* specific widths are needed for each step (LI) since they are floated inside the container (OL)
+   the same width is assigned to the div.bg too, since it is absolutely positioned, relative to the OL
+   you should not really need less than three or more than five steps! */
+div.multi-step.three-steps ol > li {
+	width:34%;
+}
+div.multi-step.three-steps ol > li:first-child {
+	width:32%;					/* a .1 percent less will keep the items in a single row, most of the time */
+}
+div.multi-step.three-steps ol > li .bg {
+	width:33%;
+	margin-right:1%;
+}
+div.multi-step.three-steps ol > li:first-child .bg {
+	width:31%;
+}
+
+div.multi-step.four-steps ol > li {
+	width:20%;
+}
+div.multi-step.four-steps ol > li .bg {
+	width:19%;
+	margin-right:1%;
+}
+
+div.multi-step.five-steps ol > li {
+	width:20%;
+}
+div.multi-step.five-steps ol > li .bg {
+	width:19%;
+	margin-right:1%;
+}
+
+
+/* IE 8 fixes */
+@media \0screen {
+	div.multi-step ol > li .wrap:before {
+		border-width:0;
+		top:6px;
+	}
+}
+
+
+/* IE 7 fixes */
+@media screen\9 {
+	div.multi-step ol > li .num {
+		border-width:0;
+		top:6px;
+	}
+}
