@@ -153,9 +153,11 @@
                 </ol>
             </div><!-- end Steps Progress Bar -->
         
-            <h1 class="ya-page-title">
+            <h1 class="ya-page-title clearfix">
                 Yoga Teacher Training Tracks
                 <span class="ya-help-icon" aria-hidden="true" data-icon="T"></span>
+                <a href="#" class="btn btn-warning pull-right"><span class="icon-arrow-down"></span>Show Instructions</a>
+                
             </h1>
             
             <div class="ya-article">
@@ -163,8 +165,8 @@
                     
                     <!-- ############## Edit Track ############## -->
                     <article class="ya-edit-track">
-                        <h3>Edit Track</h3>
-                        <div class="ya-edit-track-container">
+                        <h2>New Track</h2>
+                        <div class="ya-widget ya-edit-track-container">
                             <div class="ya-edit-track-controls">
                                 <div class="ya-select-designation">
                                     <label for="select-designation">Select Designation</label>
@@ -216,9 +218,20 @@
                                     </li>
                                 </ul>
                             </div>
-                            <button type="button" class="btn btn-success pull-right">Create Track</button>
                         </div>
-                        
+                        <div class="row-fluid ya-track-btns">
+                        	<div class="span3"><a href="#" class="btn"><span class="icon-undo"></span> Add New Trainer</a></div>
+                            <div class="span3"><label>Add trak trainer</label>
+                            <select>
+                            	<option>Select Trainer</option>
+                            </select></div>
+                            <div class="span3">
+	                            <a href="#" class="btn btn-success">Add to Trainer</a>
+                            </div>
+                            <div class="span3">
+		                        <button type="button" class="btn btn-success pull-right ">Create Track</button>
+                            </div>
+                        </div><!--ya-track-btns -->
                     </article><!-- end Edit Track -->
         
         
