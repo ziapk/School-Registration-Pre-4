@@ -144,3 +144,11 @@ div.multi-step.five-steps ol > li .bg {
 		top:6px;
 	}
 }
+@media (max-width: 979px){
+div.multi-step.four-steps ol > li{
+	height:auto !important;
+}
+div.multi-step.numbered ol > li .wrap{
+	padding-left:23%;
+}
+}

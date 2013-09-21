@@ -36,7 +36,6 @@
     <![endif]-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/modernizr.custom.82095.js"></script>
-	<script src="libray/jquery-2.0.0.min.js"></script>
     <script src="libray/modernizr-2.0.6-development-only.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/school-registration-pre-4.js"></script>
@@ -220,18 +219,49 @@
                             </div>
                         </div>
                         <div class="row-fluid ya-track-btns">
-                        	<div class="span3"><a href="#" class="btn"><span class="icon-undo"></span> Add New Trainer</a></div>
+                        	<div class="span3">
+                                <label class="hidden-phone">&nbsp;</label>
+                                <a href="#" class="btn"><span class="icon-undo"></span> Add New Trainer</a>
+                                <p><a href="#">(Return to Staff and Trainers)</a></p>
+                            </div>
+                            
                             <div class="span3"><label>Add trak trainer</label>
                             <select>
                             	<option>Select Trainer</option>
                             </select></div>
                             <div class="span3">
-	                            <a href="#" class="btn btn-success">Add to Trainer</a>
+	                            <label class="hidden-phone">&nbsp;</label>
+	                            <button class="btn btn-success input-medium">Add to Trainer</button>
                             </div>
                             <div class="span3">
-		                        <button type="button" class="btn btn-success pull-right ">Create Track</button>
+	                            <label class="hidden-phone">&nbsp;</label>
+		                        <button type="button" class="btn btn-success pull-right input-medium ">Create Track</button>
                             </div>
                         </div><!--ya-track-btns -->
+                        <div class="ya-widget">
+                            <form class="form-inline">
+                            
+                            <p><label class="checkbox"><input type="checkbox" id="invoke-clause"> &nbsp;&nbsp; Invoke Consistency Clause</label>
+                            <span data-icon="T" aria-hidden="true" class="ya-help"></span></p>
+                            <div class="hidden show-on-clause">
+                                <label>Explain how you maintain consistency of instruction</label>
+                                <textarea rows="5" class="input-block-level clause-description"></textarea>
+                                <div class="ya-button-row clearfix">
+                                    <button class="btn btn-success input-medium show-clause-description">Save</button>
+                                    <button class="btn cancel-memo input-medium">Cancel</button>
+                                </div>
+                            </div>
+                            <!-- SHOW THESE AFTER USER CLICKS SAVE -->
+                                <div class="for-clause-description hidden" style="display: none; visibility: visible;">
+                                    <div class="ya-button-row clearfix">
+                                        <p class="live-desc"></p>
+                                        <a class="ya-action for-show-clause-description " href="#">Edit</a>
+                                    </div>
+                                </div>
+                            <!-- END SHOW -->
+                            </form>
+                        </div>
+                        
                     </article><!-- end Edit Track -->
         
         

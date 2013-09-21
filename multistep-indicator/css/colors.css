@@ -67,3 +67,8 @@ div.multi-step.color-5 ol > li.current .bg,
 div.multi-step.color-5 ol > li.current .bg .arrow {
 	background-image:url(../img/colors/orange_active.png);
 }
+@media (max-width: 767){
+	div.multi-step.numbered ol > li .num{
+		z-index:999;
+	}
+}
