@@ -197,7 +197,10 @@ span[data-icon] {
 
 	}
 	.ya-yoga-type-list {
-		@include makeFluidColumn(3);
+		@include makeFluidColumn(5);
+		@include for-screen(desktop){
+			@include makeFluidColumn(6);
+		}
 		input[type='checkbox'] {
 			@include ya-checkbox-control;
 		}
@@ -323,11 +326,6 @@ select.ya-empty {
 		}
 	}
 }
-@media (max-width: 979px) {
-.ya-yoga-type-list{
-	width:38% !important;
-}
-}
 
 @media (max-width: 767px) {
 	body{
@@ -346,4 +344,54 @@ select.ya-empty {
 		position:relative;
 		z-index:999;
 	}
+}
+
+
+.live-desc{
+	font-style:italic;
+}
+
+	.ya-yoga-type-list {
+		@include for-screen(desktop){
+			@include makeFluidColumn(6);
+		}
+	}
+
+.btn-link{
+    color: #96171A;
+    font-size: 13px;
+    padding: 0;
+}
+.ya-trainers-row{
+    border-bottom: 2px solid #CCCCCC;
+    margin: 15px 0;
+    padding-bottom: 10px;
+}
+.ya-seperator {
+    border-left: 1px solid #888888;
+    margin: 0 2px 0 0;
+}
+.ya-name {
+    font-family: $Bold;
+    font-size: 18px;
+}
+.ya-tick {
+    color: #447E2B;
+    font-size: 13px;
+    margin: 0 3px;
+}
+.ya-controls{
+	text-align:right;
+	@include for-screen(mobile){
+		text-align:left;
+	}
+}
+.ya-date {
+    font-family: $Bold;
+    margin: 0 0 0 20px;
+	display:inline-block;
+		@include for-screen(mobile){
+		 float: right;
+	}
+
 }

@@ -1385,10 +1385,20 @@ span[data-icon] {
 .ya-edit-track .ya-yoga-type-list {
   float: left;
   margin-left: 2.12766%;
-  width: 23.40426%;
+  width: 40.42554%;
 }
 .ya-edit-track .ya-yoga-type-list:first-child {
   margin-left: 0;
+}
+@media (max-width: 1200px) {
+  .ya-edit-track .ya-yoga-type-list {
+    float: left;
+    margin-left: 2.12766%;
+    width: 48.93618%;
+  }
+  .ya-edit-track .ya-yoga-type-list:first-child {
+    margin-left: 0;
+  }
 }
 .ya-edit-track .ya-yoga-type-list input[type='checkbox'] {
   float: left;
@@ -1565,11 +1575,6 @@ select.ya-empty {
     box-sizing: border-box;
   }
 }
-@media (max-width: 979px) {
-  .ya-yoga-type-list {
-    width: 38% !important;
-  }
-}
 @media (max-width: 767px) {
   body {
     padding: 0 !important;
@@ -1586,5 +1591,67 @@ select.ya-empty {
   div.multi-step.numbered ol > li .num {
     position: relative;
     z-index: 999;
+  }
+}
+.live-desc {
+  font-style: italic;
+}
+
+@media (max-width: 1200px) {
+  .ya-yoga-type-list {
+    float: left;
+    margin-left: 2.12766%;
+    width: 48.93618%;
+  }
+  .ya-yoga-type-list:first-child {
+    margin-left: 0;
+  }
+}
+
+.btn-link {
+  color: #96171A;
+  font-size: 13px;
+  padding: 0;
+}
+
+.ya-trainers-row {
+  border-bottom: 2px solid #CCCCCC;
+  margin: 15px 0;
+  padding-bottom: 10px;
+}
+
+.ya-seperator {
+  border-left: 1px solid #888888;
+  margin: 0 2px 0 0;
+}
+
+.ya-name {
+  font-family: "ProximaNova-Bold";
+  font-size: 18px;
+}
+
+.ya-tick {
+  color: #447E2B;
+  font-size: 13px;
+  margin: 0 3px;
+}
+
+.ya-controls {
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .ya-controls {
+    text-align: left;
+  }
+}
+
+.ya-date {
+  font-family: "ProximaNova-Bold";
+  margin: 0 0 0 20px;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .ya-date {
+    float: right;
   }
 }
